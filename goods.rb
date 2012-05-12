@@ -1,7 +1,7 @@
 require 'rubygems'
 require 'highline/import'
-require '/root/桌面/老师做的/goods_class.rb'
-require '/root/桌面/老师做的/basket.rb'
+require './goods_class.rb'
+require './basket.rb'
 
 
 def welcomeMessage
@@ -21,7 +21,7 @@ end
 welcomeMessage()
 	
 goods_list = []
-File.open("/root/桌面/老师做的/goods.txt").each_line do |line|
+File.open("./goods.txt").each_line do |line|
    goods_list << Goods.new(line)
 end
 
